@@ -1,0 +1,313 @@
+/*geralzão*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Fundo da imagem principal*/
+html{
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    /*background: linear-gradient(rgba(17, 17, 17, 0.8), rgb(22, 22, 22,1)) , url(https://s.zst.com.br/cms-assets/2021/12/shutterstock_1785682424.webp);*/
+    background-position: center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    background-color: #84ADDD;
+}
+
+
+/* Menu*/
+header{
+    width: 100% ;
+    height: 7vh;
+    background-color: rgb(22, 22, 22,0.2);
+}
+
+
+/*text-transform: uppercase;-- todas letras em Maiúsculas*/
+.menu-content{
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.logo{
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+}
+
+.menu-content .list-itens{
+    display: flex;
+    list-style: none;
+    gap: 10px;  /* distancia entre eles*/
+}
+
+.menu-content .list-itens a{
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    transform: 2ms ease-in; /* efeito massa*/
+    position: relative;
+}
+
+.menu-content .list-itens a:before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: rgb(252, 252, 248);
+    transition: all 1.5s ease;
+}
+
+/* para a animação funcionar*/
+.menu-content .list-itens a:hover:before{
+   width: 100%;
+}
+
+
+
+
+
+/*Div wrapper-- passar automático*/
+.wrapper {
+    margin: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.slide-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.slide-list {
+    display: flex;
+}
+
+.slide-item {
+    cursor: grab;
+    flex-shrink: 0;
+    padding: 0 10px;
+    width: 40vw;
+}
+
+.slide-content {
+    border-radius: 10px;
+    border: 1px solid #fff;
+    box-shadow: #070707 0px 12px 12px;
+    position: relative;
+}
+
+.slide-image {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.slide-description {
+    border-radius: 10px;
+    background: linear-gradient(to top, #000, transparent);
+    color: #fff;
+    position: absolute;
+    padding: 30px;
+    bottom: 0;
+    width: 100%;
+}
+
+.slide-description h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 48px;
+    position: relative;
+    top: 16px
+}
+
+.slide-description p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 24px;
+}
+
+.slide-nav-button {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 36px;
+    position: absolute;
+    z-index: 1;
+}
+
+.slide-nav-previous {
+    left: 20px;
+}
+
+.slide-nav-next {
+    right: 20px;
+}
+
+.slide-controls {
+    margin: 30px auto 0;
+}
+
+.slide-control-button {
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+.slide-control-button.active {
+    color: #cd8cf5;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-description {
+        padding: 10px;
+    }
+    
+    .slide-description h3 {
+        font-size: 24px;
+        top: 0;
+    }
+
+    .slide-description p {
+        display: none;
+    }
+
+    .slide-nav-button {
+        margin-top: -20px;
+        font-size: 28px;
+    }
+    
+    .slide-nav-previous {
+        left: 10px;
+    }
+    
+    .slide-nav-next {
+        right: 10px;
+    }
+
+    .slide-controls {
+        margin: 15px auto 0;
+    }
+
+    .slide-control-button {
+        font-size: 14px;
+    }
+}
+
+
+
+/**/
+/* Conteiner 2- estética*/
+.second-content{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+    background-color: white;
+    justify-content: center;
+    color: #000;
+}
+.second-content .img-about{
+    flex: 50%;
+}
+
+#imageOne{
+    border-radius: 20px;
+}
+
+.second-content .about-content{
+    flex: 50%;
+    align-items: center;
+    padding-left: 30px;
+
+}
+
+
+/* Container 5- Contatos*/
+.thirt-content{
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border: solid 5px white;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*Rodapé*/
+footer{
+    background-color: #ffffff;
+    margin-top: 20px;
+    text-align: center;
+    padding: 2%; 
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+}
+
+
+/*SERVIÇOS PAGE*/
+.pacotes{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; 
+    text-align: center; 
+}
+
+.comum{
+    background-color: #1d6fcc;
+    color: rgb(255, 255, 255);
+    height: 100px;
+    width: 300px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.comum h1{
+    padding: 20px;
+}
+
+.first-pacote{
+    margin-right: 100px;
+    height: 400px;
+    background-color: white;
+    color: #6395cf;
+    font-size: 16px;
+}
+
+.second-pacote{
+    margin-right: 100px;
+    background-color: white;
+    color: #6395cf;
+}
+
+
+.third-pacote{
+    margin-right: 100px;
+    background-color: white;
+    color: #6395cf;
+}
